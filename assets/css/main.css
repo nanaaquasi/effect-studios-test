@@ -1,0 +1,47 @@
+@import "tailwindcss";
+/* src/assets/css/main.css */
+
+@font-face {
+  font-family: "PushPenny";
+  src: url("@/assets/fonts/PushPenny-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PushPenny";
+  src: url("@/assets/fonts/PushPenny-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PushPenny";
+  src: url("@/assets/fonts/PushPenny-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PushPenny";
+  src: url("@/assets/fonts/PushPenny-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PushPenny";
+  src: url("@/assets/fonts/PushPenny-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "PushPenny", sans-serif;
+  background-color: #fff !important; /* Default font for all text */
+}
+
+html {
+  height: auto; /* Important for Lenis */
+  overflow: hidden; /* Prevent default scroll */
+}
