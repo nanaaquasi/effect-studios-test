@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full h-[93vh] sm:h-[92vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
+    class="relative w-full h-[80vh] sm:h-[80vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
   >
     <div class="flex-grow flex items-center justify-center w-full relative">
       <div
@@ -16,14 +16,11 @@
         ]"
       >
         <div class="flex items-center justify-center">
-          <div
-            class="relative w-[200px] sm:w-[250px] h-[400px] sm:h-[500px] rounded-[20px] sm:rounded-[40px] bg-black shadow-2xl border-4 sm:border-8 border-[#63C57B] overflow-hidden hidden sm:block"
-          >
-            <!-- Screen -->
-            <div
-              class="absolute inset-0 bg-[#233375] flex items-center justify-center text-center"
-            ></div>
-          </div>
+          <img
+            src="~/assets/svgs/iphone.svg"
+            alt="phone"
+            class="hidden sm:block mr-20 w-90 h-110"
+          />
 
           <img
             src="~/assets/svgs/hero-mobile.svg"
@@ -34,7 +31,7 @@
 
         <div class="flex flex-col sm:flex-row justify-between px-4 sm:px-7">
           <h2
-            class="font-medium text-blue-900 mb-4 w-full sm:w-[55vw] text-[48px] sm:text-[64px]"
+            class="font-medium text-blue-900 mb-4 w-full sm:w-[55vw] text-[42px] sm:text-[60px]"
             v-html="slide.title"
             style="line-height: 1.1"
           ></h2>
@@ -70,44 +67,44 @@
         ></div>
       </div>
     </div>
+  </div>
 
-    <div
-      class="flex flex-col sm:flex-row px-7 sm:px-16 py-2 sm:py-7 align-center justify-between"
-    >
-      <div class="flex items-center gap-4 sm:hidden">
-        <img src="~/assets/svgs/how-it-works.svg" alt="how it works" />
-        <p class="text-[#233375] text-lg">See how it works</p>
-      </div>
-      <div class="gap-4 sm:gap-6 hidden sm:flex">
-        <p class="text-[#6E80A3] font-light">News & Release update</p>
-        <div class="flex flex-col">
-          <div class="flex gap-1">
-            <p class="text-[#6E80A3] font-light">June 01, 2022 —</p>
-            <a href="/press" class="text-[#2668EC]"
-              >Bomba now has a dollar wallet, activate your account</a
-            >
-          </div>
-          <div class="flex gap-1">
-            <p class="text-[#6E80A3] font-light">June 01, 2022 —</p>
-            <a class="text-[#2668EC]" href="/press"
-              >Top 10 Summer Vacation Places In 2022</a
-            >
-          </div>
+  <div
+    class="flex flex-col sm:flex-row px-7 sm:px-16 py-4 sm:py-7 align-center justify-between"
+  >
+    <div class="flex items-center gap-4 sm:hidden">
+      <img src="~/assets/svgs/how-it-works.svg" alt="how it works" />
+      <p class="text-[#233375] text-lg">See how it works</p>
+    </div>
+    <div class="gap-4 sm:gap-6 hidden sm:flex">
+      <p class="text-[#6E80A3] font-light">News & Release update</p>
+      <div class="flex flex-col">
+        <div class="flex gap-1">
+          <p class="text-[#6E80A3] font-light">June 01, 2022 —</p>
+          <a href="/press" class="text-[#2668EC]"
+            >Bomba now has a dollar wallet, activate your account</a
+          >
+        </div>
+        <div class="flex gap-1">
+          <p class="text-[#6E80A3] font-light">June 01, 2022 —</p>
+          <a class="text-[#2668EC]" href="/press"
+            >Top 10 Summer Vacation Places In 2022</a
+          >
         </div>
       </div>
-
-      <a href="#features-section" class="flex sm:gap-2 mt-4 sm:mt-0">
-        <p
-          class="text-xl sm:text-2xl text-medium mb-1 text-[#233375] hidden sm:block"
-        >
-          Scroll Down
-        </p>
-        <ArrowDown color="#63C57B" />
-      </a>
     </div>
 
-    <div class="dotted-line"></div>
+    <a href="#features-section" class="flex sm:gap-2 mt-4 sm:mt-0">
+      <p
+        class="text-xl sm:text-2xl text-medium mb-1 text-[#233375] hidden sm:block"
+      >
+        Scroll Down
+      </p>
+      <ArrowDown color="#63C57B" />
+    </a>
   </div>
+
+  <div class="dotted-line"></div>
 </template>
 
 <script setup>
