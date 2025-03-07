@@ -106,7 +106,7 @@
     </a>
   </div>
 
-  <div class="dotted-line"></div>
+  <!-- <div class="dotted-line"></div> -->
 </template>
 
 <script setup>
@@ -152,7 +152,7 @@ onUnmounted(() => {
   height: 1px;
   color: blueviolet;
   /* dashed border */
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='6' stroke-dasharray='6%2c 14' stroke-dashoffset='32' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='blueviolet' stroke-width='6' stroke-dasharray='6%2c 14' stroke-dashoffset='32' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
 @keyframes progress {

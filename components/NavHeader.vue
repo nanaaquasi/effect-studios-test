@@ -88,12 +88,15 @@ export default {
     const isMobileMenuOpen = ref(false);
     const navItems = ref([
       { label: "Features", options: ["Press"] },
-      { label: "Help", options: [] },
+      { label: "Press", options: [], link: "/press" },
       { label: "Company", options: ["About Us", "Careers"] },
     ]);
 
     const toggleDropdown = (item) => {
-      if (!item.options.length) return;
+      if (!item.options.length) {
+        window.location.href = item.link;
+        return;
+      }
       dropdown.value = dropdown.value === item?.label ? null : item?.label;
     };
 
