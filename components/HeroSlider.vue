@@ -46,7 +46,9 @@
     </div>
 
     <!-- Slide Indicators -->
-    <div class="w-full bg-gray-300 flex justify-center gap-4 sm:gap-12 h-[2px]">
+    <div
+      class="w-full bg-gray-300 flex justify-center gap-4 sm:gap-12 h-[2px] hidden sm:block"
+    >
       <div
         v-for="(slide, index) in slides"
         :key="index"
