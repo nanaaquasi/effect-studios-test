@@ -1,21 +1,21 @@
 <template>
   <main>
     <div
-      class="news-media-section bg-[url('~/assets/svgs/press-bg.svg')] bg-cover bg-center p-16"
+      class="news-media-section bg-[url('~/assets/svgs/press-bg.svg')] bg-cover bg-center p-8 sm:p-16"
     >
       <div
-        class="container flex flex-col justify-start items-start gap-2 px-20"
+        class="container flex flex-col justify-start items-start gap-2 px-4 sm:px-20"
       >
         <h2
-          class="text-[70px] font-medium text-[#0D2C65]"
-          style="line-height: 75px"
+          class="text-4xl sm:text-[70px] font-medium text-[#0D2C65]"
+          style="line-height: 1.2"
         >
           Latest news and media <br />
           from around the world
         </h2>
         <p
-          class="mt-6 text-2xl text-[#6E80A3] font-light"
-          style="line-height: 30px"
+          class="mt-4 sm:mt-6 text-lg sm:text-2xl text-[#6E80A3] font-light"
+          style="line-height: 1.5"
         >
           Please write to us at
           <a href="mailto:media@bomba.co" class="">media@bomba.co</a>
@@ -23,10 +23,10 @@
           media enquiry. We'll do our best to get back to you as<br />
           soon as possible.
         </p>
-        <div class="mt-6">
+        <div class="mt-4 sm:mt-6">
           <a
             href="#"
-            class="text-[#0D2C65] font-semibold flex items-center justify-center gap-2 border-b border-[#0D2C65] py-4"
+            class="text-[#0D2C65] font-semibold flex items-center justify-center gap-2 border-b border-[#0D2C65] py-2 sm:py-4"
           >
             Get press kit ↗
           </a>
@@ -34,9 +34,9 @@
       </div>
     </div>
 
-    <section class="container px-8 mx-auto my-30">
+    <section class="container px-4 sm:px-8 mx-auto my-10 sm:my-30">
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-12 gap-y-10 sm:gap-y-20"
       >
         <NewsCard
           v-for="(news, index) in newsCards"
@@ -50,7 +50,7 @@
             <img
               :src="`/${news.image}.svg`"
               alt="news"
-              class="w-full h-48 object-cover"
+              class="w-full h-32 sm:h-48 object-cover"
             />
           </template>
         </NewsCard>
@@ -62,7 +62,6 @@
 </template>
 
 <script setup>
-// Optional script setup if needed
 const newsCards = [
   {
     category: "Connecting Africa",

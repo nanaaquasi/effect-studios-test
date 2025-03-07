@@ -1,8 +1,8 @@
 <template>
   <div
-    class="w-[360px] news-card flex flex-col bg-[#F8F9FE] rounded-md overflow-hidden"
+    class="w-full sm:w-[360px] news-card flex flex-col bg-[#F8F9FE] rounded-md overflow-hidden"
   >
-    <div class="p-6 flex-1">
+    <div class="p-4 sm:p-6 flex-1">
       <div class="relative inline-block mb-4">
         <div
           class="bg-[#23CE6B] text-white text-xs font-medium px-4 py-1 rounded-sm relative z-10"
@@ -14,10 +14,10 @@
         ></div>
       </div>
 
-      <h3 class="text-xl font-bold text-blue-900">{{ title }}</h3>
-      <p class="text-sm text-gray-500 mt-2">{{ date }}</p>
+      <h3 class="text-lg sm:text-xl font-bold text-blue-900">{{ title }}</h3>
+      <p class="text-xs sm:text-sm text-gray-500 mt-2">{{ date }}</p>
     </div>
-    <div class="h-48 overflow-hidden">
+    <div class="h-32 sm:h-48 overflow-hidden">
       <slot name="news-img"></slot>
     </div>
   </div>
@@ -35,7 +35,6 @@ defineProps({
 <style scoped>
 img {
   max-height: 300px;
-
   transition: transform 0.3s ease;
 }
 img:hover {

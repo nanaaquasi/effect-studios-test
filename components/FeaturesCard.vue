@@ -1,19 +1,19 @@
 <template>
   <div
     :class="[
-      'rounded-3xl w-[530px] px-12 pt-20 relative overflow-hidden flex flex-col justify-between',
+      'rounded-3xl w-full sm:w-[530px] px-6 sm:px-12 pt-10 sm:pt-20 relative overflow-hidden flex flex-col justify-between',
       card?.bgColor,
       card?.minHeight,
     ]"
   >
     <div>
-      <p class="text-lg mb-2 text-[#6E80A3]">
+      <p class="text-base sm:text-lg mb-2 text-[#6E80A3]">
         {{ card?.category }}
       </p>
-      <h2 class="text-3xl font-bold mb-4 text-[#0D2C65]">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-[#0D2C65]">
         {{ card?.title }}
       </h2>
-      <p class="text-base mb-6 text-[#6E80A3] leading-1.3">
+      <p class="text-sm sm:text-base mb-6 text-[#6E80A3] leading-1.3">
         {{ card?.description }}
       </p>
       <a href="#" class="font-semibold flex items-center gap-2 text-[#2668EC]">

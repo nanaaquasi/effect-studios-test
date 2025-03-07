@@ -2,14 +2,14 @@
   <div class="flex flex-col">
     <HeroSlider :slides="slides" />
 
-    <main class="container mx-auto px-6 lg:px-12 mb-20">
+    <main class="container mx-auto px-4 sm:px-6 lg:px-12 mb-10 sm:mb-20">
       <!-- Mission section -->
       <section
-        class="w-full flex flex-col items-center justify-center py-30 mb-15"
+        class="w-full flex flex-col items-center justify-center py-10 sm:py-20 lg:py-30 mb-10 sm:mb-15"
       >
-        <div class="w-3/4 mx-auto flex justify-center">
+        <div class="w-full sm:w-3/4 mx-auto flex justify-center">
           <p
-            class="text-4xl text-[#233375] text-center font-medium"
+            class="text-2xl sm:text-4xl text-[#233375] text-center font-medium"
             style="line-height: 1.1"
           >
             We are on a mission to reduce the cost of sending <br />
@@ -17,18 +17,22 @@
           </p>
         </div>
 
-        <div class="flex items-center justify-center mt-10 gap-20">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center mt-5 sm:mt-10 gap-10 sm:gap-20"
+        >
           <CurrencyConverter />
-          <section class="py-16 bg-white w-2/4">
-            <h3 class="text-lg text-[#6E80A3] mb-2">Why Bomba?</h3>
+          <section class="py-8 sm:py-16 bg-white w-full sm:w-2/4">
+            <h3 class="text-base sm:text-lg text-[#6E80A3] mb-2">Why Bomba?</h3>
             <h2
-              class="text-[60px] font-medium text-[#0D2C65] leading-none mb-6"
+              class="text-3xl sm:text-[60px] font-medium text-[#0D2C65] leading-none mb-6"
             >
               Send & Receive <br />
               money on your own <br />
               terms
             </h2>
-            <p class="text-lg text-[#6E80A3] max-w-3xl mx-auto leading-relaxed">
+            <p
+              class="text-base sm:text-lg text-[#6E80A3] max-w-3xl mx-auto leading-relaxed"
+            >
               Bomba provides you the luxury of sending money at rates that suit
               you. You can easily send and swap money between
               <strong class="text-blue-900">GBP</strong>,
@@ -47,11 +51,13 @@
 
       <section
         id="features-section"
-        class="w-full flex flex-col justify-center py-30"
+        class="w-full flex flex-col justify-center py-10 sm:py-20 lg:py-30"
       >
-        <div class="w-4/4 mx-auto flex flex-col justify-center text-center">
+        <div
+          class="w-full sm:w-4/4 mx-auto flex flex-col justify-center text-center"
+        >
           <p
-            class="text-[40px] text-[#233375] text-center font-medium"
+            class="text-2xl sm:text-[40px] text-[#233375] text-center font-medium"
             style="line-height: 50px"
           >
             The Bomba app help our users send & receive money,<br />swap
@@ -60,7 +66,7 @@
           </p>
 
           <p
-            class="text-base text-center text-[#6E80A3] max-w-3xl mx-auto mt-5"
+            class="text-sm sm:text-base text-center text-[#6E80A3] max-w-3xl mx-auto mt-5"
           >
             We are customer centric and focused on offering values to you that
             enable you <br />
@@ -68,14 +74,18 @@
           </p>
         </div>
 
-        <div class="w-full flex justify-center items-center gap-15 my-15">
-          <div class="flex flex-col items-center justify-center gap-15">
+        <div
+          class="w-full flex flex-col sm:flex-row justify-center items-center gap-10 sm:gap-15 my-10 sm:my-15"
+        >
+          <div
+            class="flex flex-col items-center justify-center gap-10 sm:gap-15"
+          >
             <FeaturesCard :card="cards[0]">
               <template #image-bg>
                 <img
                   src="~/assets/svgs/p2p.svg"
                   alt="Peer to peer marketplace illustration"
-                  class="absolute bottom-0 right-0 w-5/5"
+                  class="absolute bottom-0 right-0 w-full sm:w-5/5"
                 />
               </template>
             </FeaturesCard>
@@ -84,19 +94,19 @@
                 <img
                   src="~/assets/svgs/referral.svg"
                   alt="Peer to peer marketplace illustration"
-                  class="absolute bottom-0 right-0 w-5/5"
+                  class="absolute bottom-0 right-0 w-full sm:w-5/5"
                 />
               </template>
             </FeaturesCard>
           </div>
 
-          <div class="flex flex-col gap-15">
+          <div class="flex flex-col gap-10 sm:gap-15">
             <FeaturesCard :card="cards[1]">
               <template #image-bg>
                 <img
                   src="~/assets/svgs/express.svg"
                   alt="Express money transfer illustration"
-                  class="absolute bottom-0 right-0 w-5/5"
+                  class="absolute bottom-0 right-0 w-full sm:w-5/5"
                 />
               </template>
             </FeaturesCard>
@@ -105,7 +115,7 @@
                 <img
                   src="~/assets/svgs/connect.svg"
                   alt="Deals from top brands illustration"
-                  class="absolute bottom-0 right-0 w-5/5"
+                  class="absolute bottom-0 right-0 w-full sm:w-5/5"
                 />
               </template>
             </FeaturesCard>
@@ -115,10 +125,12 @@
 
       <!-- Trusted partners section -->
 
-      <section class="w-full flex justify-center py-30 gap-10">
-        <div class="w-1/2 flex flex-col">
+      <section
+        class="w-full flex flex-col sm:flex-row justify-center py-10 sm:py-20 lg:py-30 gap-5 sm:gap-10"
+      >
+        <div class="w-full sm:w-1/2 flex flex-col">
           <h3
-            class="text-[60px] text-[#0D2C65] leading-none font-medium mb-2"
+            class="text-3xl sm:text-[60px] text-[#0D2C65] leading-none font-medium mb-2"
             style="line-height: 1.2"
           >
             Trusted partners <br />
@@ -130,7 +142,7 @@
           </h2>
         </div>
 
-        <div class="w-[600px] flex flex-wrap gap-8">
+        <div class="w-full sm:w-[600px] flex flex-wrap gap-4 sm:gap-8">
           <BrandLogo
             v-for="(logo, index) in brandLogos"
             :key="index"

@@ -7,7 +7,7 @@
         v-for="(slide, index) in slides"
         :key="index"
         :class="[
-          'absolute inset-0 flex flex-col justify-center gap-8 px-10 transition-all duration-1000 ease-in-out',
+          'absolute inset-0 flex flex-col justify-center gap-8 px-4 sm:px-10 transition-all duration-1000 ease-in-out',
           currentIndex === index
             ? 'opacity-100 translate-x-0'
             : index < currentIndex
@@ -17,7 +17,7 @@
       >
         <div class="flex items-center justify-center">
           <div
-            class="relative w-[250px] h-[500px] rounded-[40px] bg-black shadow-2xl border-8 border-[#63C57B] overflow-hidden"
+            class="relative w-[200px] sm:w-[250px] h-[400px] sm:h-[500px] rounded-[20px] sm:rounded-[40px] bg-black shadow-2xl border-4 sm:border-8 border-[#63C57B] overflow-hidden"
           >
             <!-- Screen -->
             <div
@@ -26,13 +26,13 @@
           </div>
         </div>
 
-        <div class="flex justify-between px-7">
+        <div class="flex flex-col sm:flex-row justify-between px-4 sm:px-7">
           <h2
-            class="font-medium text-blue-900 mb-4 w-[55vw]"
+            class="font-medium text-blue-900 mb-4 w-full sm:w-[55vw]"
             v-html="slide.title"
-            style="line-height: 1.1; font-size: 64px"
+            style="line-height: 1.1; font-size: 32px; sm:font-size: 64px"
           ></h2>
-          <div class="flex items-end w-[40vw]">
+          <div class="flex items-end w-full sm:w-[40vw]">
             <p
               class="text-md text-[#233375] mb-4"
               v-html="slide.description"
@@ -43,11 +43,11 @@
     </div>
 
     <!-- Slide Indicators -->
-    <div class="w-full bg-gray-300 flex justify-center gap-12 h-[2px]">
+    <div class="w-full bg-gray-300 flex justify-center gap-4 sm:gap-12 h-[2px]">
       <div
         v-for="(slide, index) in slides"
         :key="index"
-        class="h-[2px] w-[220px] bg-gray-300 rounded-full overflow-hidden cursor-pointer"
+        class="h-[2px] w-[100px] sm:w-[220px] bg-gray-300 rounded-full overflow-hidden cursor-pointer"
         @click="goToSlide(index)"
       >
         <div
@@ -65,8 +65,10 @@
       </div>
     </div>
 
-    <div class="flex px-16 py-7 align-center justify-between">
-      <div class="flex gap-6">
+    <div
+      class="flex flex-col sm:flex-row px-4 sm:px-16 py-4 sm:py-7 align-center justify-between"
+    >
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
         <p class="text-[#6E80A3] font-light">News & Release update</p>
         <div class="flex flex-col">
           <div class="flex gap-1">
@@ -84,8 +86,10 @@
         </div>
       </div>
 
-      <a href="#features-section" class="flex gap-2">
-        <p class="text-2xl text-medium mb-1 text-[#233375]">Scroll Down</p>
+      <a href="#features-section" class="flex gap-2 mt-4 sm:mt-0">
+        <p class="text-xl sm:text-2xl text-medium mb-1 text-[#233375]">
+          Scroll Down
+        </p>
         <ArrowDown color="#63C57B" />
       </a>
     </div>
@@ -152,31 +156,4 @@ onUnmounted(() => {
 .animate-progress {
   animation: progress 5s linear forwards;
 }
-/* @keyframes progress {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-.animate-progress {
-  animation: progress 5s linear forwards;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-} */
 </style>
