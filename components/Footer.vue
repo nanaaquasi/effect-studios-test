@@ -33,7 +33,7 @@
                 <a href="#" class="text-[#6E80A3] hover:underline">Features</a>
               </li>
               <li>
-                <a href="#" class="text-[#6E80A3] hover:underline">Blog</a>
+                <a href="/press" class="text-[#6E80A3] hover:underline">Blog</a>
               </li>
               <li>
                 <a href="#" class="text-[#6E80A3] hover:underline">Careers</a>
