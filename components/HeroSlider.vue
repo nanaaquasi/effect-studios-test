@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full h-[80vh] sm:h-[80vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
+    class="relative w-full h-[78vh] sm:h-[80vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
   >
     <div class="flex-grow flex items-center justify-center w-full relative">
       <div
@@ -25,7 +25,7 @@
           <img
             src="~/assets/svgs/hero-mobile.svg"
             alt="phone"
-            class="block sm:hidden mr-20"
+            class="block sm:hidden mr-20 h-80"
           />
         </div>
 
@@ -47,7 +47,7 @@
 
     <!-- Slide Indicators -->
     <div
-      class="w-full bg-gray-300 flex justify-center gap-4 sm:gap-12 h-[2px] hidden sm:block"
+      class="w-full bg-gray-300 sm:flex justify-center gap-4 sm:gap-12 h-[2px] hidden"
     >
       <div
         v-for="(slide, index) in slides"
@@ -72,7 +72,7 @@
   </div>
 
   <div
-    class="flex flex-col sm:flex-row px-7 sm:px-16 py-4 sm:py-7 align-center justify-between"
+    class="flex flex-col sm:flex-row px-7 sm:px-16 py-4 sm:py-7 align-center justify-between bg-[#F8F9FE]"
   >
     <div class="flex items-center gap-4 sm:hidden">
       <img src="~/assets/svgs/how-it-works.svg" alt="how it works" />
