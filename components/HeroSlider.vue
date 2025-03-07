@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full h-[78vh] sm:h-[80vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
+    class="relative w-full h-[77vh] sm:h-[80vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
   >
     <div class="flex-grow flex items-center justify-center w-full relative">
       <div
@@ -33,7 +33,7 @@
           <h2
             class="font-medium text-blue-900 mb-4 w-full sm:w-[55vw] text-[42px] sm:text-[60px]"
             v-html="slide.title"
-            style="line-height: 1.1"
+            style="line-height: 1.2"
           ></h2>
           <div class="flex items-end w-full sm:w-[40vw]">
             <p
