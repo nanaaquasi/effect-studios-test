@@ -1,20 +1,28 @@
 <template>
   <main>
     <div
-      class="news-media-section bg-[url('~/assets/svgs/press-bg.svg')] bg-cover bg-center p-8 sm:p-16"
+      class="news-media-section bg-[url('~/assets/svgs/press-bg.svg')] bg-cover bg-center px-4 py-25 sm:p-16"
     >
       <div
         class="container flex flex-col justify-start items-start gap-2 px-4 sm:px-20"
       >
         <h2
-          class="text-4xl sm:text-[70px] font-medium text-[#0D2C65]"
-          style="line-height: 1.2"
+          class="hidden sm:block text-5xl sm:text-[70px] font-medium text-[#233375]"
+          style="line-height: 77px; letter-spacing: -2%"
         >
           Latest news and media <br />
           from around the world
         </h2>
+
+        <h2
+          class="block sm:hidden text-5xl sm:text-[70px] font-medium text-[#233375]"
+          style="line-height: 56px; letter-spacing: -2%"
+        >
+          Latest news <br />
+          and media from the Bomba Clan
+        </h2>
         <p
-          class="mt-4 sm:mt-6 text-lg sm:text-2xl text-[#6E80A3] font-light"
+          class="mt-4 sm:mt-6 text-2xl sm:text-2xl text-[#6E80A3] font-light"
           style="line-height: 1.5"
         >
           Please write to us at
@@ -26,7 +34,7 @@
         <div class="mt-4 sm:mt-6">
           <a
             href="#"
-            class="text-[#0D2C65] font-semibold flex items-center justify-center gap-2 border-b border-[#0D2C65] py-2 sm:py-4"
+            class="text-[#2668EC] font-medium flex items-center justify-center gap-2 border-b border-[#2668EC] py-2 sm:py-4"
           >
             Get press kit ↗
           </a>
@@ -34,9 +42,9 @@
       </div>
     </div>
 
-    <section class="container px-4 sm:px-8 mx-auto my-10 sm:my-30">
+    <section class="container px-4 sm:px-8 mx-auto my-35 sm:my-30">
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-12 gap-y-10 sm:gap-y-20"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-12 gap-y-15 sm:gap-y-20"
       >
         <NewsCard
           v-for="(news, index) in newsCards"

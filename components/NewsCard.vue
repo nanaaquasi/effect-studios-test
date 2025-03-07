@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full sm:w-[360px] news-card flex flex-col bg-[#F8F9FE] rounded-md overflow-hidden"
+    class="w-full sm:w-[360px] news-card flex flex-col bg-[#F8F9FE] rounded-lg overflow-hidden"
   >
     <div class="p-4 sm:p-6 flex-1">
       <div class="relative inline-block mb-4">
@@ -14,8 +14,10 @@
         ></div>
       </div>
 
-      <h3 class="text-lg sm:text-xl font-bold text-blue-900">{{ title }}</h3>
-      <p class="text-xs sm:text-sm text-gray-500 mt-2">{{ date }}</p>
+      <h3 class="text-lg sm:text-xl font-medium text-[#0D2C65]">{{ title }}</h3>
+      <p class="text-xs sm:text-sm text-[#6E80A3] font-light mt-2">
+        {{ date }}
+      </p>
     </div>
     <div class="h-32 sm:h-48 overflow-hidden">
       <slot name="news-img"></slot>

@@ -1,13 +1,13 @@
 <template>
   <div
-    class="relative w-full h-[92vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
+    class="relative w-full h-[93vh] sm:h-[92vh] overflow-hidden bg-[#F8F9FE] flex flex-col"
   >
     <div class="flex-grow flex items-center justify-center w-full relative">
       <div
         v-for="(slide, index) in slides"
         :key="index"
         :class="[
-          'absolute inset-0 flex flex-col justify-center gap-8 px-4 sm:px-10 transition-all duration-1000 ease-in-out',
+          'absolute inset-0 flex flex-col justify-center gap-0 sm:gap-8 px-4 sm:px-10 transition-all duration-1000 ease-in-out',
           currentIndex === index
             ? 'opacity-100 translate-x-0'
             : index < currentIndex
@@ -17,20 +17,26 @@
       >
         <div class="flex items-center justify-center">
           <div
-            class="relative w-[200px] sm:w-[250px] h-[400px] sm:h-[500px] rounded-[20px] sm:rounded-[40px] bg-black shadow-2xl border-4 sm:border-8 border-[#63C57B] overflow-hidden"
+            class="relative w-[200px] sm:w-[250px] h-[400px] sm:h-[500px] rounded-[20px] sm:rounded-[40px] bg-black shadow-2xl border-4 sm:border-8 border-[#63C57B] overflow-hidden hidden sm:block"
           >
             <!-- Screen -->
             <div
               class="absolute inset-0 bg-[#233375] flex items-center justify-center text-center"
             ></div>
           </div>
+
+          <img
+            src="~/assets/svgs/hero-mobile.svg"
+            alt="phone"
+            class="block sm:hidden mr-20"
+          />
         </div>
 
         <div class="flex flex-col sm:flex-row justify-between px-4 sm:px-7">
           <h2
-            class="font-medium text-blue-900 mb-4 w-full sm:w-[55vw]"
+            class="font-medium text-blue-900 mb-4 w-full sm:w-[55vw] text-[48px] sm:text-[64px]"
             v-html="slide.title"
-            style="line-height: 1.1; font-size: 32px; sm:font-size: 64px"
+            style="line-height: 1.1"
           ></h2>
           <div class="flex items-end w-full sm:w-[40vw]">
             <p
@@ -66,28 +72,34 @@
     </div>
 
     <div
-      class="flex flex-col sm:flex-row px-4 sm:px-16 py-4 sm:py-7 align-center justify-between"
+      class="flex flex-col sm:flex-row px-7 sm:px-16 py-2 sm:py-7 align-center justify-between"
     >
-      <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
+      <div class="flex items-center gap-4 sm:hidden">
+        <img src="~/assets/svgs/how-it-works.svg" alt="how it works" />
+        <p class="text-[#233375] text-lg">See how it works</p>
+      </div>
+      <div class="gap-4 sm:gap-6 hidden sm:flex">
         <p class="text-[#6E80A3] font-light">News & Release update</p>
         <div class="flex flex-col">
           <div class="flex gap-1">
             <p class="text-[#6E80A3] font-light">June 01, 2022 —</p>
-            <a href="#" class="text-[#2668EC]"
+            <a href="/press" class="text-[#2668EC]"
               >Bomba now has a dollar wallet, activate your account</a
             >
           </div>
           <div class="flex gap-1">
             <p class="text-[#6E80A3] font-light">June 01, 2022 —</p>
-            <a class="text-[#2668EC]" href="#"
+            <a class="text-[#2668EC]" href="/press"
               >Top 10 Summer Vacation Places In 2022</a
             >
           </div>
         </div>
       </div>
 
-      <a href="#features-section" class="flex gap-2 mt-4 sm:mt-0">
-        <p class="text-xl sm:text-2xl text-medium mb-1 text-[#233375]">
+      <a href="#features-section" class="flex sm:gap-2 mt-4 sm:mt-0">
+        <p
+          class="text-xl sm:text-2xl text-medium mb-1 text-[#233375] hidden sm:block"
+        >
           Scroll Down
         </p>
         <ArrowDown color="#63C57B" />

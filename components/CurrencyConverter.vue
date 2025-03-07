@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 bg-white w-full sm:w-2/3 lg:w-1/3 pr-0 sm:pr-10">
+  <div class="bg-white w-full sm:w-2/3 lg:w-1/3 pr-0 sm:pr-5">
     <div class="w-full mb-4 relative">
       <label
         for="amount"
@@ -7,27 +7,28 @@
         >You send</label
       >
       <div
-        class="flex h-[60px] w-full items-center border rounded-r-2xl border-gray-300 overflow-hidden mt-4"
+        class="flex h-[60px] sm:h-[70px] w-full items-center border rounded-r-2xl border-gray-300 overflow-hidden mt-4"
       >
         <input
           id="amount"
           v-model="amount"
           type="number"
-          class="w-full h-full px-3 py-2 outline-none text-[#0D2C65] font-medium text-2xl"
+          class="w-full h-full px-3 py-4 outline-none text-[#0D2C65] font-medium text-2xl"
           placeholder="Amount"
           @input="convertCurrency"
         />
         <div
-          class="bg-blue-900 w-2/4 h-full text-center justify-center text-white px-2 py-2 flex items-center gap-2 cursor-pointer"
+          class="bg-[#233375] w-2/4 h-full text-center justify-center text-white px-2 py-2 flex items-center gap-2 cursor-pointer"
           @click="showFromCurrencyDropdown = !showFromCurrencyDropdown"
         >
           <span :class="`fi fi-${currencyFlags[fromCurrency]}`"></span>
           {{ fromCurrency }}
-          <span class="ml-2">▼</span>
+
+          <ChevronDown color="#04CE9D" />
         </div>
         <div
           v-if="showFromCurrencyDropdown"
-          class="absolute bg-white border mt-2 w-full z-10"
+          class="absolute top-12 bg-white shadow-md mt-2 w-full z-10"
         >
           <div
             v-for="currency in currencies"
@@ -58,7 +59,7 @@
         >Recipient Gets</label
       >
       <div
-        class="flex h-[60px] w-full items-center border rounded-r-2xl border-gray-300 overflow-hidden mt-4"
+        class="flex h-[60px] sm:h-[70px] w-full items-center border rounded-r-2xl border-gray-300 overflow-hidden mt-4"
       >
         <input
           id="convertedAmount"
@@ -68,16 +69,17 @@
           readonly
         />
         <div
-          class="bg-blue-900 text-white px-2 w-2/4 h-full py-3 flex justify-center items-center gap-2 cursor-pointer"
+          class="bg-[#233375] text-white px-2 w-2/4 h-full py-3 flex justify-center items-center gap-2 cursor-pointer"
           @click="showToCurrencyDropdown = !showToCurrencyDropdown"
         >
           <span :class="`fi fi-${currencyFlags[toCurrency]}`"></span>
           {{ toCurrency }}
-          <span class="ml-2">▼</span>
+
+          <ChevronDown color="#04CE9D" />
         </div>
         <div
           v-if="showToCurrencyDropdown"
-          class="absolute bg-white border mt-2 w-full z-10"
+          class="absolute top-12 bg-white shadow-md mt-2 w-full z-10"
         >
           <div
             v-for="currency in currencies"
@@ -92,10 +94,10 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-3 my-4">
+    <div class="flex flex-col gap-3 my-4 sm:my-8">
       <div class="flex justify-between">
         <div class="flex flex-col gap-1">
-          <p class="text-xs text-[#6F6F6F]">Amount we'll convert</p>
+          <p class="text-sm font-light text-[#6F6F6F]">Amount we'll convert</p>
           <p class="text-[#0D2C65] text-lg">
             {{ formattedAmount }}
           </p>
@@ -104,7 +106,9 @@
         <div class="flex flex-col gap-1 text-right">
           <div class="flex items-center text-xs">
             <Clock color="#23CE6B" size="15" />
-            <p class="text-xs text-[#6F6F6F] ml-1">Guaranteed rate (1 hr)</p>
+            <p class="text-sm font-light text-[#6F6F6F] ml-1">
+              Guaranteed rate (1 hr)
+            </p>
           </div>
           <p class="text-[#0D2C65]">
             {{ fromCurrency }}1 / {{ toCurrency }}{{ rate }}
@@ -114,21 +118,21 @@
 
       <div class="flex justify-between">
         <div class="flex flex-col gap-1">
-          <p class="text-xs text-[#6F6F6F]">Total to Pay</p>
+          <p class="text-sm font-light text-[#6F6F6F]">Total to Pay</p>
           <p class="text-[#0D2C65] text-lg">
             {{ formattedTotalToPay }} {{ fromCurrency }}
           </p>
         </div>
 
         <div class="flex flex-col gap-1 text-right">
-          <p class="text-xs text-[#6F6F6F]">Average duration</p>
+          <p class="text-sm font-light text-[#6F6F6F]">Average duration</p>
           <p class="text-[#0D2C65]">Instant</p>
         </div>
       </div>
     </div>
 
     <button
-      class="w-full bg-blue-900 text-white py-4 rounded-lg text-center hover:bg-blue-700 transition"
+      class="w-full bg-[#233375] text-white py-4 rounded-lg text-center hover:bg-[#233375] transition hidden sm:block"
     >
       Get started for free
     </button>
@@ -137,7 +141,7 @@
 
 <script setup>
 import { ref, computed, watch, onMounted } from "vue";
-import { Clock } from "lucide-vue-next";
+import { Clock, ChevronDown } from "lucide-vue-next";
 
 const amount = ref(100);
 const rate = ref(0);

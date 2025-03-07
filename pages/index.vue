@@ -2,36 +2,50 @@
   <div class="flex flex-col">
     <HeroSlider :slides="slides" />
 
-    <main class="container mx-auto px-4 sm:px-6 lg:px-12 mb-10 sm:mb-20">
+    <main class="container mx-auto px-8 sm:px-6 lg:px-0 mb-10 sm:mb-20">
       <!-- Mission section -->
       <section
-        class="w-full flex flex-col items-center justify-center py-10 sm:py-20 lg:py-30 mb-10 sm:mb-15"
+        class="w-full flex flex-col items-center justify-center py-20 sm:py-20 lg:py-30 mb-10 sm:mb-15"
       >
         <div class="w-full sm:w-3/4 mx-auto flex justify-center">
           <p
-            class="text-2xl sm:text-4xl text-[#233375] text-center font-medium"
-            style="line-height: 1.1"
+            class="text-[34px] sm:text-[40px] text-[#233375] text-start sm:text-center font-medium"
+            style="line-height: 1.2; letter-spacing: -2%"
           >
-            We are on a mission to reduce the cost of sending <br />
-            money to Africa at an average cost of 1%
+            We are on a mission to reduce the cost of sending money to Africa at
+            an average cost of 1%
           </p>
         </div>
 
+        <div class="sm:hidden w-full flex flex-col justify-center mt-15">
+          <h3 class="text-2xl text-[#6E80A3] mb-2">Why Bomba?</h3>
+          <h2
+            class="text-5xl font-medium text-[#0D2C65] mb-6"
+            style="line-height: 56px"
+          >
+            Send & Receive money on your own terms
+          </h2>
+        </div>
+
         <div
-          class="flex flex-col sm:flex-row items-center justify-center mt-5 sm:mt-10 gap-10 sm:gap-20"
+          class="flex flex-col sm:flex-row items-center justify-center mt-5 sm:mt-15 gap-5"
         >
           <CurrencyConverter />
-          <section class="py-8 sm:py-16 bg-white w-full sm:w-2/4">
-            <h3 class="text-base sm:text-lg text-[#6E80A3] mb-2">Why Bomba?</h3>
-            <h2
-              class="text-3xl sm:text-[60px] font-medium text-[#0D2C65] leading-none mb-6"
-            >
-              Send & Receive <br />
-              money on your own <br />
-              terms
-            </h2>
+          <section class="py-8 sm:py-16 pl-0 sm:pl-20 bg-white w-full sm:w-2/4">
+            <div class="hidden sm:flex flex-col">
+              <h3 class="text-base sm:text-2xl text-[#6E80A3] mb-2 font-light">
+                Why Bomba?
+              </h3>
+              <h2
+                class="text-3xl sm:text-[60px] font-medium text-[#0D2C65] mb-6"
+                style="line-height: 70px"
+              >
+                Send & Receive money on your own terms
+              </h2>
+            </div>
+
             <p
-              class="text-base sm:text-lg text-[#6E80A3] max-w-3xl mx-auto leading-relaxed"
+              class="text-lg sm:text-lg text-[#6E80A3] max-w-3xl mx-auto leading-relaxed font-light"
             >
               Bomba provides you the luxury of sending money at rates that suit
               you. You can easily send and swap money between
@@ -47,30 +61,40 @@
         </div>
       </section>
 
+      <div class="h-[1px] bg-[#6E80A3]/80 w-full sm:w-5xl mx-auto"></div>
+
       <!-- Features section -->
 
       <section
         id="features-section"
-        class="w-full flex flex-col justify-center py-10 sm:py-20 lg:py-30"
+        class="w-full flex flex-col justify-center py-10 sm:pt-15 sm:pb-30"
       >
         <div
-          class="w-full sm:w-4/4 mx-auto flex flex-col justify-center text-center"
+          class="w-full sm:w-6xl mx-auto flex flex-col justify-center text-center px-0 sm:px-7"
         >
           <p
-            class="text-2xl sm:text-[40px] text-[#233375] text-center font-medium"
+            class="text-2xl sm:text-[40px] text-[#233375] text-center font-medium hidden sm:block"
             style="line-height: 50px"
           >
-            The Bomba app help our users send & receive money,<br />swap
-            currencies across borders and pay bills, safely, <br />
+            The Bomba app help our users send & receive money,
+            <br />swap currencies across borders and pay bills, safely,
             conveniently, cheaply and on time.
           </p>
 
+          <!-- show only on mobile -->
           <p
-            class="text-sm sm:text-base text-center text-[#6E80A3] max-w-3xl mx-auto mt-5"
+            class="block sm:hidden text-[48px] text-[#233375] font-medium text-start"
+            style="line-height: 56px; letter-spacing: -2%"
+          >
+            The Bomba app is all you need<br />
+            to send money <br />both at home <br />and abroad
+          </p>
+
+          <p
+            class="text-[18px] text-start sm:text-center sm:text-base text-[#6E80A3] max-w-3xl mx-auto mt-5 font-light px-0 sm:px-20"
           >
             We are customer centric and focused on offering values to you that
-            enable you <br />
-            achieve your financial needs.
+            enable you achieve your financial needs.
           </p>
         </div>
 
@@ -126,19 +150,17 @@
       <!-- Trusted partners section -->
 
       <section
-        class="w-full flex flex-col sm:flex-row justify-center py-10 sm:py-20 lg:py-30 gap-5 sm:gap-10"
+        class="w-full flex flex-col sm:flex-row justify-center py-10 sm:py-20 lg:py-30 gap-5 sm:gap-10 px-0 sm:px-10"
       >
         <div class="w-full sm:w-1/2 flex flex-col">
           <h3
-            class="text-3xl sm:text-[60px] text-[#0D2C65] leading-none font-medium mb-2"
+            class="text-5xl sm:text-[64px] text-[#0D2C65] leading-none font-medium mb-2 pr-10 sm:pr-0"
             style="line-height: 1.2"
           >
-            Trusted partners <br />
-            worldwide
+            Trusted partners worldwide
           </h3>
-          <h2 class="text-[#6E80A3] mb-6">
-            We're partners with countless major organisations <br />around the
-            globe
+          <h2 class="text-[#6E80A3] mb-6 text-[18px] font-light pr-0 sm:pr-40">
+            We're partners with countless major organisations around the globe
           </h2>
         </div>
 
@@ -171,7 +193,7 @@ const slides = [
     linkText: "Get Started",
   },
   {
-    title: "Choose from several <br/> payment methods",
+    title: "Choose from several payment methods",
     description:
       "With Bomba, you get to choose how you send and receive money; send at your own rate with <a href='#' class='text-green-400'>'Swap'</a>, send and receive instantly with <a href='#' class='text-green-400'>'Express'</a>,  or make free local transfers with <a href='#' class='text-green-400'>'Withdraw Money'.</a>",
     link: "#",
@@ -236,7 +258,7 @@ const cards = [
     titleColor: "text-blue-900",
     descColor: "text-blue-800",
     borderColor: "border-blue-800",
-    minHeight: "h-[750px]",
+    minHeight: "h-[650px] sm:h-[750px]",
   },
   {
     category: "Refer & Earn",
@@ -251,7 +273,7 @@ const cards = [
     titleColor: "text-blue-900",
     descColor: "text-blue-800",
     borderColor: "border-blue-800",
-    minHeight: "h-[750px]",
+    minHeight: "h-[650px] sm:h-[750px]",
   },
   {
     category: "Bomba Connect",
