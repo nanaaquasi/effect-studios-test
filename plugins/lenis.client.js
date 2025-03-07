@@ -15,7 +15,7 @@ export default defineNuxtPlugin(() => {
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom ease
       smoothWheel: true,
       wheelMultiplier: 0.8, // Lower wheel multiplier for smoother performance
-      touchMultiplier: 1.5, // Lower touch multiplier for better control
+      touchMultiplier: 0, // Lower touch multiplier for better control
       infinite: false,
     });
 
@@ -36,5 +36,8 @@ export default defineNuxtPlugin(() => {
         lenis,
       },
     };
+  } else {
+    // Enable default scroll behavior on mobile
+    document.documentElement.style.scrollBehavior = "smooth";
   }
 });

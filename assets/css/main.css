@@ -42,6 +42,6 @@ body {
 }
 
 html {
-  height: auto; /* Important for Lenis */
-  overflow: hidden; /* Prevent default scroll */
+  height: auto;
+  /* overflow: hidden;  */
 }
